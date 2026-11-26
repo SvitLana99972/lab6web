@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* Доріжка по якій рухається блок */
+.track {
+    width: 600px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Кольоровий квадрат який рухається */
+.moving-block {
+    width: 100px;
+    height: 100px;
+    background-color: #2b6588;
+    animation: moveHorizontal 3s linear infinite alternate;
+}
+
+/* Аереміщення зліва направо */
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}

@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+/* Коло з різними типами рамок */
+.circle-arrow {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: relative;
+
+
+    border-bottom: 8px solid #66b3ff;
+    border-right: 8px solid #66b3ff;
+    border-top: 8px dashed #66b3ff;
+    border-left: 8px dotted #66b3ff;
+
+    animation: spinClockwise 3s linear infinite;
+}
+
+/* Еаконечник стрілки на лінії кола */
+.arrow-head {
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 24px solid #3399ff;
+    position: absolute;
+    left: 6px;
+    bottom: 12px;
+    transform: rotate(-45deg);
+}
+
+/* Обертання */
+@keyframes spinClockwise {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(405deg);
+    }
+}
